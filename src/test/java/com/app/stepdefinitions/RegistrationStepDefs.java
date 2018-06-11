@@ -1,8 +1,10 @@
 package com.app.stepdefinitions;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import com.app.pages.RegistrationPage;
 import com.app.utilities.ConfigurationReader;
@@ -12,7 +14,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import gherkin.ast.DataTable;
+import io.cucumber.datatable.DataTable;
 
 public class RegistrationStepDefs {
 
@@ -28,16 +30,17 @@ public class RegistrationStepDefs {
 	}
 
 	@Then("I should see {string}")
-	public void i_should_see(String string) {
-		
-
-		throw new PendingException();
+	public void i_should_see(String registrationForm) {
+		Assert.assertEquals(true, page.registrationForm.getText().equals(registrationForm));
 	}
 
 	@Then("all labels with their fields should be present:")
 	public void all_labels_with_their_fields_should_be_present(DataTable dataTable) {
-
-		throw new PendingException();
+		List<List<String>> data = dataTable.asLists();
+		System.out.println(data.size());
+		for (int i = 0; i < data.size(); i++) {
+			System.out.println(data.get(i).get(0));
+		}
 	}
 
 	@When("I click on Submit")

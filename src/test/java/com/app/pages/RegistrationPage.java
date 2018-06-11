@@ -14,7 +14,15 @@ public class RegistrationPage {
 		this.driver = Driver.getDriver();
 		PageFactory.initElements(driver, this);
 	}
-
+	
+	@FindBy(xpath="//*[@id=\"post-49\"]/header/h1")
+	public WebElement header;
+	
+	
+	@FindBy(xpath="//*[@id=\"piereg_pie_form_heading\"]")
+	public WebElement registrationForm;
+	
+	
 	@FindBy(id = "name_3_firstname")
 	public WebElement FirstName;
 	

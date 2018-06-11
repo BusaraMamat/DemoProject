@@ -40,12 +40,12 @@ Scenario Outline: All fields are present on the registration page
       | firstName   | lastName   | Hobby   | Phone Number   | Username   | E-mail   | password   | passwordConfirm   |
       | <firstName> | <lastName> | <Hobby> | <Phone Number> | <Username> | <E-mail> | <password> | <passwordConfirm> |
 
-    Examples: Fill all the fields
-      | firstName | lastName | Marital Status | Hobby   | Country | Date of Birth | Phone Number | Username  | E-mail            | Your Profile Picture | About Yourself | password | passwordConfirm |
-      | Nadi      | Kim      | Single         | Dance   | China   | 6/24/1989     |   7893453232 | Gum       | mary@gmail.com    | state&&              | smart          | jones123 | jones123        |
-      | Indiana   | Jones    | Devorced       | Reading | Benin   | 9/21/1989     |   3654735624 | IDontKnow | cary@gmail.com    | Ica ^                | kind           | bond123  | bond123         |
-      | Bond      | James    | Married        | Cricket | Haiti   | 6/4/1989      |   3674326352 | JamesBond | bary@gmail.com    | Oslo  %%             | beautiful      | Norway   | bond            |
-      | Han       | Solo     | Single         | Cricket | Togo    | 3/2/1989      |   5533365242 | Uhhhhh    |hary@gmail.com     | Auckland  &&         | smart          | solo123  | solo123         |
+#    Examples: Fill all the fields
+#      | firstName | lastName | Marital Status | Hobby   | Country | Date of Birth | Phone Number | Username  | E-mail            | Your Profile Picture | About Yourself | password | passwordConfirm |
+#      | Nadi      | Kim      | Single         | Dance   | China   | 6/24/1989     |   7893453232 | Gum       | mary@gmail.com    | state&&              | smart          | jones123 | jones123        |
+#      | Indiana   | Jones    | Devorced       | Reading | Benin   | 9/21/1989     |   3654735624 | IDontKnow | cary@gmail.com    | Ica ^                | kind           | bond123  | bond123         |
+#      | Bond      | James    | Married        | Cricket | Haiti   | 6/4/1989      |   3674326352 | JamesBond | bary@gmail.com    | Oslo  %%             | beautiful      | Norway   | bond            |
+#      | Han       | Solo     | Single         | Cricket | Togo    | 3/2/1989      |   5533365242 | Uhhhhh    |hary@gmail.com     | Auckland  &&         | smart          | solo123  | solo123         |
 
   @register
   Scenario Outline: Unable to register a user if one field was not filled
