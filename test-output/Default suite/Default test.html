@@ -1,0 +1,1595 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/15</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jun 11 03:08:01 EDT 2018</td>
+</tr>
+<tr><td>Total time:</td><td>8 seconds (8837 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.app.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.app.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "All fields are present on the registration page", "User Registration"<br/>
+<a href="#Output-869290854" onClick='toggleBox("Output-869290854", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-869290854" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-869290854">
+<div "result">I navigate to the registration page (PASSED : 4s)</div><br/>
+<div "result">I should see &quot;Registration Form&quot; (PENDING : 0s)</div><br/>
+<div "result">all labels with their fields should be present: (SKIPPED)</div><br/>
+</div>
+</td>
+<td><div><pre>org.testng.SkipException: cucumber.api.PendingException: TODO: implement me
+	at com.app.stepdefinitions.RegistrationStepDefs.i_should_see(RegistrationStepDefs.java:32)
+	at ✽.I should see &quot;Registration Form&quot;(src/test/resources/com/app/features/UserInterfaceTests.feature:6)
+
+	at cucumber.api.testng.TestCaseResultListener.getError(TestCaseResultListener.java:52)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:59)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: cucumber.api.PendingException: TODO: implement me
+	at com.app.stepdefinitions.RegistrationStepDefs.i_should_see(RegistrationStepDefs.java:32)
+	at ✽.I should see &quot;Registration Form&quot;(src/test/resources/com/app/features/UserInterfaceTests.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace869290854", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace869290854'><pre>org.testng.SkipException: cucumber.api.PendingException: TODO: implement me
+	at com.app.stepdefinitions.RegistrationStepDefs.i_should_see(RegistrationStepDefs.java:32)
+	at ✽.I should see &quot;Registration Form&quot;(src/test/resources/com/app/features/UserInterfaceTests.feature:6)
+
+	at cucumber.api.testng.TestCaseResultListener.getError(TestCaseResultListener.java:52)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:59)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: cucumber.api.PendingException: TODO: implement me
+	at com.app.stepdefinitions.RegistrationStepDefs.i_should_see(RegistrationStepDefs.java:32)
+	at ✽.I should see &quot;Registration Form&quot;(src/test/resources/com/app/features/UserInterfaceTests.feature:6)
+</pre></div></td>
+<td>4</td>
+<td>com.app.runners.CukesRunner@7085bdee</td></tr>
+<tr>
+<td title='com.app.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.app.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Click on Submit button without filling any fields", "User Registration"<br/>
+<a href="#Output-167693809" onClick='toggleBox("Output-167693809", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-167693809" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-167693809">
+<div "result">I navigate to the registration page (PASSED : 0s)</div><br/>
+<div "result">I click on Submit (PENDING : 0s)</div><br/>
+<div "result">warning alert should be displayed: (SKIPPED)</div><br/>
+</div>
+</td>
+<td><div><pre>org.testng.SkipException: cucumber.api.PendingException: TODO: implement me
+	at com.app.stepdefinitions.RegistrationStepDefs.i_click_on_Submit(RegistrationStepDefs.java:50)
+	at ✽.I click on Submit(src/test/resources/com/app/features/UserInterfaceTests.feature:25)
+
+	at cucumber.api.testng.TestCaseResultListener.getError(TestCaseResultListener.java:52)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:59)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: cucumber.api.PendingException: TODO: implement me
+	at com.app.stepdefinitions.RegistrationStepDefs.i_click_on_Submit(RegistrationStepDefs.java:50)
+	at ✽.I click on Submit(src/test/resources/com/app/features/UserInterfaceTests.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace167693809", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace167693809'><pre>org.testng.SkipException: cucumber.api.PendingException: TODO: implement me
+	at com.app.stepdefinitions.RegistrationStepDefs.i_click_on_Submit(RegistrationStepDefs.java:50)
+	at ✽.I click on Submit(src/test/resources/com/app/features/UserInterfaceTests.feature:25)
+
+	at cucumber.api.testng.TestCaseResultListener.getError(TestCaseResultListener.java:52)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:59)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: cucumber.api.PendingException: TODO: implement me
+	at com.app.stepdefinitions.RegistrationStepDefs.i_click_on_Submit(RegistrationStepDefs.java:50)
+	at ✽.I click on Submit(src/test/resources/com/app/features/UserInterfaceTests.feature:25)
+</pre></div></td>
+<td>0</td>
+<td>com.app.runners.CukesRunner@7085bdee</td></tr>
+<tr>
+<td title='com.app.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.app.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register an account filling fields with valid credential", "User Registration"<br/>
+<a href="#Output-818785904" onClick='toggleBox("Output-818785904", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-818785904" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-818785904">
+<div "result">I navigate to the registration page (PASSED : 0s)</div><br/>
+<div "result">I enter personal details: (FAILED : 0s)</div><br/>
+<div "result">I click on Continue (SKIPPED)</div><br/>
+<div "result">I should see &quot;Thank you for your registration&quot; (SKIPPED)</div><br/>
+</div>
+</td>
+<td><div><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace818785904", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace818785904'><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div></td>
+<td>0</td>
+<td>com.app.runners.CukesRunner@7085bdee</td></tr>
+<tr>
+<td title='com.app.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.app.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register an account filling fields with valid credential", "User Registration"<br/>
+<a href="#Output-1011104118" onClick='toggleBox("Output-1011104118", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1011104118" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1011104118">
+<div "result">I navigate to the registration page (PASSED : 0s)</div><br/>
+<div "result">I enter personal details: (FAILED : 0s)</div><br/>
+<div "result">I click on Continue (SKIPPED)</div><br/>
+<div "result">I should see &quot;Thank you for your registration&quot; (SKIPPED)</div><br/>
+</div>
+</td>
+<td><div><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1011104118", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1011104118'><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div></td>
+<td>0</td>
+<td>com.app.runners.CukesRunner@7085bdee</td></tr>
+<tr>
+<td title='com.app.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.app.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register an account filling fields with valid credential", "User Registration"<br/>
+<a href="#Output-1544067887" onClick='toggleBox("Output-1544067887", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1544067887" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1544067887">
+<div "result">I navigate to the registration page (PASSED : 0s)</div><br/>
+<div "result">I enter personal details: (FAILED : 0s)</div><br/>
+<div "result">I click on Continue (SKIPPED)</div><br/>
+<div "result">I should see &quot;Thank you for your registration&quot; (SKIPPED)</div><br/>
+</div>
+</td>
+<td><div><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1544067887", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1544067887'><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div></td>
+<td>0</td>
+<td>com.app.runners.CukesRunner@7085bdee</td></tr>
+<tr>
+<td title='com.app.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.app.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register an account filling fields with valid credential", "User Registration"<br/>
+<a href="#Output-1317441269" onClick='toggleBox("Output-1317441269", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1317441269" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1317441269">
+<div "result">I navigate to the registration page (PASSED : 0s)</div><br/>
+<div "result">I enter personal details: (FAILED : 0s)</div><br/>
+<div "result">I click on Continue (SKIPPED)</div><br/>
+<div "result">I should see &quot;Thank you for your registration&quot; (SKIPPED)</div><br/>
+</div>
+</td>
+<td><div><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1317441269", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1317441269'><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div></td>
+<td>0</td>
+<td>com.app.runners.CukesRunner@7085bdee</td></tr>
+<tr>
+<td title='com.app.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.app.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register an account filling fields with valid credential", "User Registration"<br/>
+<a href="#Output-1120072844" onClick='toggleBox("Output-1120072844", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1120072844" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1120072844">
+<div "result">I navigate to the registration page (PASSED : 0s)</div><br/>
+<div "result">I enter personal details: (FAILED : 0s)</div><br/>
+<div "result">I click on Continue (SKIPPED)</div><br/>
+<div "result">I should see &quot;Thank you for your registration&quot; (SKIPPED)</div><br/>
+</div>
+</td>
+<td><div><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1120072844", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1120072844'><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div></td>
+<td>0</td>
+<td>com.app.runners.CukesRunner@7085bdee</td></tr>
+<tr>
+<td title='com.app.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.app.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unable to register a user if one field was not filled", "User Registration"<br/>
+<a href="#Output-2141932519" onClick='toggleBox("Output-2141932519", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2141932519" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2141932519">
+<div "result">I navigate to the registration page (PASSED : 0s)</div><br/>
+<div "result">I enter personal details: (FAILED : 0s)</div><br/>
+<div "result">I click on Continue (SKIPPED)</div><br/>
+<div "result">warning alert should be displayed (SKIPPED)</div><br/>
+<div "result">I should not see &quot;Thank you for your registration&quot; (SKIPPED)</div><br/>
+</div>
+</td>
+<td><div><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace2141932519", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2141932519'><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div></td>
+<td>0</td>
+<td>com.app.runners.CukesRunner@7085bdee</td></tr>
+<tr>
+<td title='com.app.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.app.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unable to register a user if one field was not filled", "User Registration"<br/>
+<a href="#Output-737756161" onClick='toggleBox("Output-737756161", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-737756161" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-737756161">
+<div "result">I navigate to the registration page (PASSED : 0s)</div><br/>
+<div "result">I enter personal details: (FAILED : 0s)</div><br/>
+<div "result">I click on Continue (SKIPPED)</div><br/>
+<div "result">warning alert should be displayed (SKIPPED)</div><br/>
+<div "result">I should not see &quot;Thank you for your registration&quot; (SKIPPED)</div><br/>
+</div>
+</td>
+<td><div><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace737756161", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace737756161'><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div></td>
+<td>0</td>
+<td>com.app.runners.CukesRunner@7085bdee</td></tr>
+<tr>
+<td title='com.app.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.app.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unable to register a user if one field was not filled", "User Registration"<br/>
+<a href="#Output-238308051" onClick='toggleBox("Output-238308051", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-238308051" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-238308051">
+<div "result">I navigate to the registration page (PASSED : 0s)</div><br/>
+<div "result">I enter personal details: (FAILED : 0s)</div><br/>
+<div "result">I click on Continue (SKIPPED)</div><br/>
+<div "result">warning alert should be displayed (SKIPPED)</div><br/>
+<div "result">I should not see &quot;Thank you for your registration&quot; (SKIPPED)</div><br/>
+</div>
+</td>
+<td><div><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace238308051", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace238308051'><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div></td>
+<td>0</td>
+<td>com.app.runners.CukesRunner@7085bdee</td></tr>
+<tr>
+<td title='com.app.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.app.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unable to register a user if one field was not filled", "User Registration"<br/>
+<a href="#Output-2095373876" onClick='toggleBox("Output-2095373876", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2095373876" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2095373876">
+<div "result">I navigate to the registration page (PASSED : 0s)</div><br/>
+<div "result">I enter personal details: (FAILED : 0s)</div><br/>
+<div "result">I click on Continue (SKIPPED)</div><br/>
+<div "result">warning alert should be displayed (SKIPPED)</div><br/>
+<div "result">I should not see &quot;Thank you for your registration&quot; (SKIPPED)</div><br/>
+</div>
+</td>
+<td><div><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace2095373876", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2095373876'><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div></td>
+<td>0</td>
+<td>com.app.runners.CukesRunner@7085bdee</td></tr>
+<tr>
+<td title='com.app.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.app.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unable to register a user if one field was not filled", "User Registration"<br/>
+<a href="#Output-1649829954" onClick='toggleBox("Output-1649829954", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1649829954" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1649829954">
+<div "result">I navigate to the registration page (PASSED : 0s)</div><br/>
+<div "result">I enter personal details: (FAILED : 0s)</div><br/>
+<div "result">I click on Continue (SKIPPED)</div><br/>
+<div "result">warning alert should be displayed (SKIPPED)</div><br/>
+<div "result">I should not see &quot;Thank you for your registration&quot; (SKIPPED)</div><br/>
+</div>
+</td>
+<td><div><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1649829954", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1649829954'><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div></td>
+<td>0</td>
+<td>com.app.runners.CukesRunner@7085bdee</td></tr>
+<tr>
+<td title='com.app.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.app.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unable to register a user if one field was not filled", "User Registration"<br/>
+<a href="#Output-229329107" onClick='toggleBox("Output-229329107", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-229329107" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-229329107">
+<div "result">I navigate to the registration page (PASSED : 0s)</div><br/>
+<div "result">I enter personal details: (FAILED : 0s)</div><br/>
+<div "result">I click on Continue (SKIPPED)</div><br/>
+<div "result">warning alert should be displayed (SKIPPED)</div><br/>
+<div "result">I should not see &quot;Thank you for your registration&quot; (SKIPPED)</div><br/>
+</div>
+</td>
+<td><div><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace229329107", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace229329107'><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div></td>
+<td>0</td>
+<td>com.app.runners.CukesRunner@7085bdee</td></tr>
+<tr>
+<td title='com.app.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.app.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unable to register a user if one field was not filled", "User Registration"<br/>
+<a href="#Output-1195670735" onClick='toggleBox("Output-1195670735", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1195670735" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1195670735">
+<div "result">I navigate to the registration page (PASSED : 0s)</div><br/>
+<div "result">I enter personal details: (FAILED : 0s)</div><br/>
+<div "result">I click on Continue (SKIPPED)</div><br/>
+<div "result">warning alert should be displayed (SKIPPED)</div><br/>
+<div "result">I should not see &quot;Thank you for your registration&quot; (SKIPPED)</div><br/>
+</div>
+</td>
+<td><div><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1195670735", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1195670735'><pre>cucumber.runtime.CucumberException: Could not convert arguments for step [I enter personal details:] defined at &apos;com.app.stepdefinitions.RegistrationStepDefs.i_enter_personal_details(DataTable) in file:/Users/busara/Desktop/Projects/demoqa/target/test-classes/&apos;.
+It appears you did not register a data table type. The details are in the stacktrace below.
+	at cucumber.runtime.PickleStepDefinitionMatch.registerTypeInConfiguration(PickleStepDefinitionMatch.java:59)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.cucumber.datatable.UndefinedDataTableTypeException: Can&apos;t convert DataTable to gherkin.ast.DataTable. Please register a DataTableType with a TableTransformer, TableEntryTransformer or TableRowTransformer for class gherkin.ast.DataTable
+	at io.cucumber.datatable.UndefinedDataTableTypeException.singletonNoConverterDefined(UndefinedDataTableTypeException.java:15)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toSingleton(DataTableTypeRegistryTableConverter.java:106)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:75)
+	at io.cucumber.datatable.DataTable.convert(DataTable.java:336)
+	at io.cucumber.stepexpression.StepExpressionFactory$3.transform(StepExpressionFactory.java:72)
+	at io.cucumber.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:39)
+	... 32 more
+</pre></div></td>
+<td>0</td>
+<td>com.app.runners.CukesRunner@7085bdee</td></tr>
+<tr>
+<td title='com.app.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.app.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unable to register a user if one field was not filled", "User Registration"<br/>
+<a href="#Output-337029130" onClick='toggleBox("Output-337029130", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-337029130" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-337029130">
+<div "result">I navigate to the registration page (FAILED : 0s)</div><br/>
+<div "result">I enter personal details: (SKIPPED)</div><br/>
+<div "result">I click on Continue (SKIPPED)</div><br/>
+<div "result">warning alert should be displayed (SKIPPED)</div><br/>
+<div "result">I should not see &quot;Thank you for your registration&quot; (SKIPPED)</div><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.40.565386 (45a059dc425e08165f9a10324bd1380cc13ca363),platform=Mac OS X 10.13.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;Busaras-MacBook-Pro.local&apos;, ip: &apos;2600:8806:300:8b70:21a1:ba63:3789:2b0d&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.4&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565386 (45a059dc425e08..., userDataDir: /var/folders/8g/mjdxf7k575n...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.79, webStorageEnabled: true}
+Session ID: b25740f4566071ad398a60b76678b8ba
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:271)
+	at com.app.stepdefinitions.RegistrationStepDefs.i_navigate_to_the_registration_page(RegistrationStepDefs.java:23)
+	at ✽.I navigate to the registration page(src/test/resources/com/app/features/UserInterfaceTests.feature:51)
+</pre></div><a href='#' onClick='toggleBox("stack-trace337029130", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace337029130'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=67.0.3396.79)
+  (Driver info: chromedriver=2.40.565386 (45a059dc425e08165f9a10324bd1380cc13ca363),platform=Mac OS X 10.13.4 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;Busaras-MacBook-Pro.local&apos;, ip: &apos;2600:8806:300:8b70:21a1:ba63:3789:2b0d&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.4&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565386 (45a059dc425e08..., userDataDir: /var/folders/8g/mjdxf7k575n...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.79, webStorageEnabled: true}
+Session ID: b25740f4566071ad398a60b76678b8ba
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:271)
+	at com.app.stepdefinitions.RegistrationStepDefs.i_navigate_to_the_registration_page(RegistrationStepDefs.java:23)
+	at ✽.I navigate to the registration page(src/test/resources/com/app/features/UserInterfaceTests.feature:51)
+</pre></div></td>
+<td>0</td>
+<td>com.app.runners.CukesRunner@7085bdee</td></tr>
+</table><p>
+</body>
+</html>
