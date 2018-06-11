@@ -29,6 +29,7 @@ public class RegistrationStepDefs {
 
 	@Then("I should see {string}")
 	public void i_should_see(String string) {
+		
 
 		throw new PendingException();
 	}

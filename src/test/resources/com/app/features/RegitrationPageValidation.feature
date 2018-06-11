@@ -1,33 +1,33 @@
-Feature: User Registration
+Feature: User Registration 
 
-  @register
-  Scenario Outline: All fields are present on the registration page
-    Given I navigate to the registration page
-    Then I should see "Registration Form"
-    And all labels with their fields should be present:
-      Examples:
-      | First Name           |
-      | Last Name            |
-      | Marital Status       |
-      | Hobby                |
-      | Country              |
-      | Date of Birth        |
-      | Phone Number         |
-      | Username             |
-      | E-mail               |
-      | Your Profile Picture |
-      | About Yourself       |
-      | Password             |
-      | Confirm Password     |
-
-  @register
+@register 
+Scenario Outline: All fields are present on the registration page 
+	Given I navigate to the registration page 
+	Then I should see "Registration Form" 
+	And all labels with their fields should be present: 
+	Examples: 
+		| First Name           |
+		| Last Name            |
+		| Marital Status       |
+		| Hobby                |
+		| Country              |
+		| Date of Birth        |
+		| Phone Number         |
+		| Username             |
+		| E-mail               |
+		| Your Profile Picture |
+		| About Yourself       |
+		| Password             |
+		| Confirm Password     |
+		
+	  @register
   Scenario: Click on Submit button without filling any fields
     Given I navigate to the registration page
     When I click on Submit
     Then warning alert should be displayed:
-      | * This field is required |
-      
- @register
+      | * This field is required |	
+		
+	@register
   Scenario Outline: Register an account filling fields with valid credential
     Given I navigate to the registration page
     And I enter personal details:
@@ -68,3 +68,4 @@ Feature: User Registration
       | Mary        | Smith      | Dance   |7893453232      |Gum         |mary@gmail.com  |            | jones123        |
       | Mary        | Smith      | Dance   |7893453232      |Gum         |mary@gmail.com  |jones123    |                 |
     
+		
